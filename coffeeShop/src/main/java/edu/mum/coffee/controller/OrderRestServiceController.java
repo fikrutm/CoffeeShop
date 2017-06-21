@@ -34,7 +34,7 @@ public class OrderRestServiceController {
 	@PostMapping("/orders/add")
 	public String addOrder(@RequestBody Order order) {
 		orderService.save(order);
-		return "ok";
+		return "OK";
 	}
 
 }

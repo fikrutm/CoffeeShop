@@ -1,3 +1,4 @@
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
@@ -8,18 +9,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Products List</title>
 </head>
-<body>
-	You can choose any presentation framework that could be integrated with
-	Spring
-	<p>
-	<p>
-		The only user is "<b>super</b>" and the password is "<b>pw</b>"
-	<p>
-		<a href="<c:url value="/secure" />"> Go to Secure Area </a>
-		<br>
-		<br>
-		<a href="<c:url value="/products/list" />"> Browse Product</a>
+<body>	
+		<h1>Remove product</h1>
+		<a href="<c:url value="/logout" />"> LogOut </a> 
+		<br> 
+		
+		<form action="/product/remove" method="post">		
+		<p>Enter Product Id:<input type="text" name="id"></p>		
+		<input type="submit" value="Remove Product" >	
+		</form>
+		
+		
+		<a href="<c:url value="/products/manage" />"> Back </a>
 </body>
 </html>
