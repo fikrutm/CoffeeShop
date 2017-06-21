@@ -7,13 +7,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Product Addition Confirmation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>product add success</title>
 </head>
-<body>
-	<h1>Product Add Success</h1>
-	<h2>${product.productName} is added to database successfully! }</h2>
-	<br>
-	<a href="<c:url value="/products/manage" />"> End </a>
+<body>	
+		<h1>${product.productName} is added successfully..! }</h1>
+		
+		<a href="<c:url value="/products/manage" />"> End</a>
 </body>
 </html>

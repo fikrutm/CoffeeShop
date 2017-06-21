@@ -11,7 +11,10 @@
 <title>Adminstration CRM</title>
 </head>
 <body>
-	<h1>Admin </h1>
+<a href="<c:url value="/logout" />">logout </a>
+<br>
+
+	<h1>Admin User's Page</h1> 
 
 
 	<a href="<c:url value="/products/list" />">List of Products</a>
@@ -20,12 +23,8 @@
 	<br>
 	<a href="<c:url value="/product/remove" />">Remove Product</a>
 	<br>
-	<br>
-	<a href="<c:url value="/product/remove" />">Person Management</a>
-	<br>
-	<br>
-	<a href="<c:url value="/product/remove" />">List Person</a>
-
+	<a href="<c:url value="/product/remove" />">Update Product</a>
+	
 	<br>
 	<br>
 	<a href="<c:url value="/admin" />"> Back </a>

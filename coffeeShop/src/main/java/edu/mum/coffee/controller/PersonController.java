@@ -13,28 +13,28 @@ public class PersonController {
 
 	@Autowired
 	private PersonService personService;
-	@GetMapping("/customers/manage")
-	public String manageCustomers(Product product) {	
+	@GetMapping("/persons/manage")
+	public String managePerson() {	//Product product
 		
-		return "customerManagement";
+		return "personManagement";
 	}
 	
-	@GetMapping("/customer/profile")
-	public String customerProfile(Product product) {	
-		return "customerProfileAdd";
-	}
+	/*@GetMapping("/person/profile")
+	public String personProfile() {	//Product product
+		return "personProfileAdd";
+	}*/
 	
-	@PostMapping("/customer/add/profile")
-	public String AddCustomer(Person person,Model model) {			
+	@PostMapping("/person/add/profile")
+	public String AddPerson(Person person,Model model) {			
 		personService.savePerson(person);
-		model.addAttribute("person", person);
-		return "customerAddSuccess";
+		model.addAttribute("person", person);	
+		return "personAddSuccess";
 	}	
-	
-	@GetMapping("/customers/list")
-	public String customersList() {	
+	/*
+	@GetMapping("/persons/list")
+	public String personsList() {	
 		
-		return "customersList";
+		return "personsList";
 	}
-
+*/
 }

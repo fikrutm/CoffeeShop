@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import edu.mum.coffee.domain.Product;
+import edu.mum.coffee.service.PersonService;
 import edu.mum.coffee.service.ProductService;
 
 @Controller
@@ -15,6 +16,13 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 
+	
+	@GetMapping("/persons/manage")
+	public String managePerson() {	//Product product
+		
+		return "personManagement";
+	}
+	
 	/*
 	 * Product Management
 	 */

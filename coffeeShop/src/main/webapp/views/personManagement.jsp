@@ -8,12 +8,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Product Addition Confirmation</title>
+<title>Person Management</title>
 </head>
 <body>
-	<h1>Product Add Success</h1>
-	<h2>${product.productName} is added to database successfully! }</h2>
-	<br>
-	<a href="<c:url value="/products/manage" />"> End </a>
+<h1>Person Management</h1>
+
+
+<a href="<c:url value="/person/profile" />">Add Person</a> <br>
+<a href="<c:url value="/persons/list" />">All Persons</a> <br>
+
+<br>
+<a href="<c:url value="/admin" />"> Back </a>
+
 </body>
 </html>

@@ -11,8 +11,27 @@
 <title>Products List</title>
 </head>
 <body>	
-		<h1>${product.id} - ${product.productName} is removed successfully from database! }</h1>
+		<h1>Add a new product</h1>
+		<a href="<c:url value="/logout" />"> LogOut </a> 
+		<br> 
+		
+		
+		<form action="/product/create" method="post">
+		
+		
+		<p>Product Name: <input type="text" name="productName"></p>
+		<p>Description: <textArea rows="20" cols="30" name="description"></textArea></p>
+		<p>Price $: <input type="text" name="price"></p>
+		<p>Product Type: <input type="text" name="productType" ></p>
+		<p> <input type="submit" value="Create Product"></p>
+		
+		</form>
+ 		
+		
+		
+		
 		
 		<a href="<c:url value="/products/manage" />"> Back </a>
+		
 </body>
 </html>
