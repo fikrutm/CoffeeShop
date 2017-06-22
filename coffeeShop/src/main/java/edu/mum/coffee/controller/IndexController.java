@@ -20,14 +20,14 @@ public class IndexController {
 	@GetMapping({ "/", "/index", "/home" })
 	public String homePage(Model model) {
 
-		/*
-		 * //to consume the WebService exposed Service methods List<Product>
-		 * products = new
-		 * RestTemplate().getForObject("http://localhost:8080/products",
-		 * ArrayList.class); model.addAttribute("products", products);
-		 */
+		
+		 //to consume the WebService exposed Service methods
+		List<Product>  products = new  RestTemplate().getForObject("http://localhost:8080/products",
+		  ArrayList.class); 
+		model.addAttribute("products", products);
+		 
 
-		model.addAttribute("products", productService.getAllProduct());
+		//model.addAttribute("products", productService.getAllProduct());
 		return "home";
 	}
 

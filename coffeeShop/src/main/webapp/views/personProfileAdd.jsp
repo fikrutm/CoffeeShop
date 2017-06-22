@@ -29,8 +29,7 @@
 		<input type="submit" value="Create Person">
 		
 		</form>
-		
-		
+			
 		
 		<a href="<c:url value="/persons/manage" />"> Back </a>
 		
