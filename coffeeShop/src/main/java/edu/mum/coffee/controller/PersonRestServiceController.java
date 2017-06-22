@@ -28,13 +28,7 @@ public class PersonRestServiceController {
 	 * 
 	 */
 
-	/******** GET LIST OF PERSONS by email *********/
-
-	@GetMapping(path = "/persons")
-	public List<Person> getPersons(@RequestParam("email") String email) {
-		return personService.findByEmail(email);
-	}
-
+	
 	/******** CREATE PERSON *********/
 	@PostMapping(path = "/persons/add")
 	public String addPerson(@RequestBody Person person) {
@@ -46,6 +40,13 @@ public class PersonRestServiceController {
 	@GetMapping(path = "/persons/{id}")
 	public Person getPersons(@PathVariable Long id) {
 		return personService.findById(id);
+	}
+
+	/******** GET LIST OF PERSONS by email *********/
+
+	@GetMapping(path = "/persons")
+	public List<Person> getPersons(@RequestParam("email") String email) {
+		return personService.findByEmail(email);
 	}
 
 	/******** UPDATE A PERSON *********/

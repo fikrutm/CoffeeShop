@@ -14,18 +14,16 @@
 </head>
 <body>
 <%@include file="nav-nav.jsp"%>
-	You can choose any presentation framework that could be integrated with
-	Spring
-	<p>
-	<p>
-		The only user is "<b>super</b>" and the password is "<b>pw</b>"
-	<p>
+	<h1>Welcome to Lissu Coffee </h1>
 		
 		<a href="<c:url value="/login" />" class="btn btn-info" role="button">Login</a>
 		<br>
 		<br>
 		
-		<a href="<c:url value="/login" />" class="btn btn-info" role="button">Registor</a>
+		<a href="<c:url value="/registration" />" class="btn btn-info" role="button">Registor</a>
+		
+		
+		<a href="<c:url value="/secure" />" class="btn btn-info" role="button">Go Here to see more products</a>
 		
 		
 		<h2>List of products</h2>
@@ -49,8 +47,6 @@
 		  </tr>
 		</c:forEach>
 		</table>
-		<br>
-		
 		
 		
 		

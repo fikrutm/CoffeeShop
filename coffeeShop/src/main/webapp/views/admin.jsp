@@ -9,13 +9,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <title>Admin User</title>
 </head>
 <body>
+<%@include file="nav-nav.jsp"%>
+
 <security:authorize access="isAuthenticated()">
    User Name: <security:authentication property="principal.username" /> 
 </security:authorize>
-	<h1>Admin User's Page</h1> <a href="<c:url value="/logout" />">logout </a>	
+	<h1>Admin User's Page</h1> <%-- <a href="<c:url value="/logout" />">logout </a>	 --%>
 		
 	  <br>
 	  <br>

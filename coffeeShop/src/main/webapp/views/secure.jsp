@@ -10,8 +10,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>You are in!</title>
 </head>
-<body><h1>You made it!</h1>
-<a href="<c:url value="/logout" />"> Now logout </a>
 
+		
+		<h2>List of products Adds goes here</h2>
+		<table>
+		  <tr>
+		  <td>Product Name</td>
+		  <td>Product Type</td>
+		  <td>Price</td>
+		  <td>Description</td>
+		 
+		  </tr>
+		  
+		   <c:forEach var="product" items="${products}"> 
+		  
+		  <tr>
+            <td>${product.productName}</td>
+            <td>${product.productType}</td>
+            <td>${product.price}</td>
+            <td>${product.description}</td>               
+
+		  </tr>
+		</c:forEach>
+		</table>
+		
 </body>
 </html>
